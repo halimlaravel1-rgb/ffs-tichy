@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FFS Tichy – Programme élections communales | On finit ce qu'on commence</title>
+<meta name="description" content="Programme électoral du Front des Forces Socialistes (FFS) pour les élections communales à Tichy (Béjaïa). 9 engagements concrets pour notre commune, entre mer et montagne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --bg: #ffffff;
+  --ink: #101B5E;
+  --mut: #4A5280;
+  --blue: #172683;
+  --blue-dark: #0c154a;
+  --blue-hover: #1f34b3;
+  --tint: #EEF0FA;
+  --pale: #DDE3FB;
+  --line: #D6DAEE;
+  --card-bg: #ffffff;
+  --shadow-sm: 0 2px 8px rgba(16,27,94,0.06);
+  --shadow-md: 0 8px 24px rgba(16,27,94,0.09);
+  --shadow-lg: 0 16px 36px rgba(16,27,94,0.12);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 78px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* Top announcement bar */
+.bar{background:var(--blue);color:#fff;font-size:14px;font-weight:500;text-align:center;padding:9px 16px;letter-spacing:.01em}
+.bar a{font-weight:700;margin-left:10px;text-decoration:underline;text-underline-offset:3px}
+.bar a:hover{opacity:.9}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:var(--transition)}
+header .wrap{display:flex;align-items:center;gap:24px;height:74px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;line-height:1.15;color:var(--ink)}
+.brand b{font-weight:900;font-size:24px;letter-spacing:-.01em;color:var(--blue)}
+.brand small{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-top:2px}
+.logo{--s:48px;width:var(--s);height:var(--s);border-radius:50%;overflow:hidden;flex:none;background:var(--tint);border:2px solid var(--pale);box-shadow:var(--shadow-sm);transition:var(--transition)}
+.logo img{display:block;width:100%;height:100%;object-fit:cover}
+.brand:hover .logo{transform:scale(1.05);border-color:var(--blue)}
+nav{display:flex;gap:22px;font-weight:600;font-size:15px;align-items:center}
+nav a{text-decoration:none;color:var(--ink);position:relative;padding:6px 2px;transition:var(--transition)}
+nav a:after{content:"";position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--blue);transition:var(--transition)}
+nav a:hover, nav a.active{color:var(--blue)}
+nav a:hover:after, nav a.active:after{width:100%}
+.pill{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--blue);color:#fff;font-weight:700;font-size:15px;padding:10px 22px;border-radius:999px;text-decoration:none;border:2px solid var(--blue);box-shadow:var(--shadow-sm);transition:var(--transition);cursor:pointer}
+.pill:hover{background:var(--blue-hover);border-color:var(--blue-hover);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.pill.out{background:#fff;color:var(--blue);border-color:var(--blue)}
+.pill.out:hover{background:var(--tint);color:var(--blue-dark)}
+.pill.sm{padding:6px 14px;font-size:13px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* Hero */
+.hero{padding:64px 0 56px;background:linear-gradient(180deg,#fff 0%,var(--tint) 100%)}
+.hero .wrap{display:grid;gap:48px;align-items:center}
+@media(min-width:960px){.hero .wrap{grid-template-columns:1.25fr 0.95fr}}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--pale);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:700;color:var(--blue);box-shadow:var(--shadow-sm);margin-bottom:18px}
+.hero-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--blue);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(1.3)}}
+.hero h1{margin:0;font-weight:900;font-stretch:72%;text-transform:uppercase;font-size:clamp(40px,7.5vw,94px);line-height:1.02;letter-spacing:-.015em;color:var(--ink)}
+.hl{background:var(--blue);color:#fff;padding:0 .18em;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hero p{font-size:19px;color:var(--mut);max-width:52ch;margin:24px 0 0;line-height:1.6}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.hero-pills span{font-size:13px;font-weight:600;color:var(--mut);background:rgba(255,255,255,0.7);padding:4px 10px;border-radius:4px;border:1px solid var(--line)}
+
+/* Hero Visual Showcase */
+.hero-showcase{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);background:var(--pale);border:4px solid #fff}
+.hero-showcase .hero-img-wrap{aspect-ratio:4/3;overflow:hidden;position:relative}
+.hero-showcase img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.hero-showcase:hover img{transform:scale(1.04)}
+.hero-showcase .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,27,94,0.1) 0%,rgba(16,27,94,0.78) 100%)}
+.hero-showcase .badge-top{position:absolute;top:16px;left:16px;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:6px 14px;border-radius:999px;box-shadow:var(--shadow-sm);border:1px solid rgba(255,255,255,0.8)}
+.hero-showcase .badge-logo{position:absolute;top:14px;right:14px;width:56px;height:56px;border-radius:50%;background:#fff;border:3px solid #fff;box-shadow:var(--shadow-md);overflow:hidden}
+.hero-showcase .badge-logo img{width:100%;height:100%;object-fit:cover}
+.hero-showcase .caption-bottom{position:absolute;left:0;right:0;bottom:0;padding:24px 20px 18px;color:#fff}
+.hero-showcase .caption-bottom h3{margin:0 0 4px;font-size:20px;font-weight:800}
+.hero-showcase .caption-bottom p{margin:0;font-size:14px;color:rgba(255,255,255,0.88);line-height:1.4}
+
+/* Strip contract */
+.strip{border-top:6px solid var(--blue);background:var(--tint);position:relative;box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+.strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0}
+.strip div.c{padding:30px 24px 32px 0;position:relative}
+.strip div.c:not(:last-child):after{content:"";position:absolute;right:16px;top:25%;height:50%;width:1px;background:var(--line)}
+.strip b{display:flex;align-items:baseline;gap:6px;font-weight:900;font-stretch:75%;font-size:44px;line-height:1;color:var(--blue);margin-bottom:10px}
+.strip b small{font-size:16px;font-weight:700;color:var(--mut);letter-spacing:0}
+.strip span{font-size:15px;color:var(--ink);line-height:1.5;display:block}
+
+/* Standard Section Layout */
+section{padding:80px 0;position:relative}
+.band{background:var(--tint)}
+.kick{display:inline-block;background:var(--pale);color:var(--blue);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.05em;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+h2{margin:0 0 14px;font-weight:900;font-stretch:78%;text-transform:uppercase;font-size:clamp(32px,5.5vw,54px);line-height:1.05;color:var(--ink);letter-spacing:-.01em}
+.sub{color:var(--mut);max-width:64ch;margin:0 0 40px;font-size:18px;line-height:1.6}
+
+/* History / Parti */
+.hist{display:grid;gap:36px;align-items:start}
+@media(min-width:840px){.hist{grid-template-columns:minmax(0,380px) 1fr}}
+.hist-card{background:#fff;border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--line)}
+.hist .ph{position:relative;background:var(--pale);aspect-ratio:3/4;overflow:hidden;margin:0}
+.hist .ph img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .4s ease}
+.hist .ph:hover img{transform:scale(1.03)}
+.hist .ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 16px 14px;color:#fff;font-weight:700;font-size:15px;background:linear-gradient(transparent,rgba(16,27,94,.92))}
+.hist .ph .tag{position:absolute;top:12px;left:12px;background:#fff;color:var(--blue);font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px;box-shadow:var(--shadow-sm)}
+.hist-quote{padding:18px 20px;background:#fff;border-top:1px solid var(--line);font-size:14px;color:var(--mut);font-style:italic;line-height:1.5}
+.hist-quote strong{color:var(--blue);display:block;margin-top:6px;font-style:normal;font-size:13px;font-weight:700}
+.tl{list-style:none;margin:0;padding:0;border-left:4px solid var(--blue);display:grid;gap:28px}
+.tl li{padding-left:26px;position:relative}
+.tl li:before{content:"";position:absolute;left:-14px;top:4px;width:20px;height:20px;border-radius:50%;background:#fff;border:4px solid var(--blue);box-shadow:0 0 0 4px var(--pale)}
+.tl b{display:block;font-weight:900;font-stretch:75%;font-size:32px;color:var(--blue);line-height:1.1;margin-bottom:4px}
+.tl span{display:block;max-width:58ch;color:var(--ink);font-size:16px;line-height:1.55}
+
+/* City Facts & Gallery */
+.facts{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin:0 0 36px}
+.facts div{background:var(--tint);border-left:6px solid var(--blue);padding:18px 20px;border-radius:var(--radius-sm);box-shadow:var(--shadow-sm);transition:var(--transition)}
+.facts div:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);background:#fff}
+.facts b{display:block;font-weight:900;font-stretch:75%;font-size:34px;color:var(--blue);line-height:1.1;margin-bottom:4px}
+.facts span{font-size:15px;color:var(--mut);font-weight:500}
+.gal{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr))}
+.gal .ph{position:relative;border-radius:var(--radius-md);overflow:hidden;background:var(--pale);aspect-ratio:4/3;box-shadow:var(--shadow-md);border:1px solid var(--line);cursor:pointer;transition:var(--transition);margin:0}
+.gal .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gal .ph:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.gal .ph:hover img{transform:scale(1.05)}
+.gal .ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;color:#fff;font-weight:700;font-size:15px;background:linear-gradient(transparent,rgba(16,27,94,.92));display:flex;align-items:center;justify-content:space-between}
+.gal .ph figcaption svg{width:18px;height:18px;opacity:0.8;flex:none}
+.gal .ph .tag{position:absolute;top:12px;left:12px;background:#fff;color:var(--blue);font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px;box-shadow:var(--shadow-sm);letter-spacing:.02em}
+
+/* Constat */
+.laws{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(310px,100%),1fr))}
+.law{background:#fff;border-radius:var(--radius-md);padding:24px;border:1px solid var(--line);border-left:6px solid var(--blue);box-shadow:var(--shadow-sm);transition:var(--transition);display:flex;flex-direction:column}
+.law:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--blue)}
+.law-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px}
+.law-ic{width:42px;height:42px;border-radius:8px;background:var(--tint);color:var(--blue);display:grid;place-items:center;flex:none}
+.law-ic svg{width:22px;height:22px;stroke-width:2}
+.law h3{margin:0;font-weight:800;font-size:20px;line-height:1.25;color:var(--ink)}
+.law p{margin:0 0 16px;font-size:15px;color:var(--mut);line-height:1.55;flex:1}
+.law .law-link{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);cursor:pointer}
+.law .law-link:hover{text-decoration:underline}
+
+/* Programme Controls & Search */
+.prog-controls{margin-bottom:28px;display:flex;flex-direction:column;gap:16px}
+.search-box{position:relative;max-width:560px}
+.search-box input{width:100%;padding:14px 20px 14px 46px;font-size:16px;font-family:inherit;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:999px;outline:none;transition:var(--transition)}
+.search-box input:focus{border-color:var(--blue);box-shadow:0 0 0 4px var(--pale)}
+.search-box svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--mut)}
+.filter-chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{background:#fff;border:1px solid var(--line);color:var(--mut);font-size:13px;font-weight:700;padding:7px 16px;border-radius:999px;cursor:pointer;transition:var(--transition)}
+.chip:hover{border-color:var(--blue);color:var(--blue)}
+.chip.active{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:var(--shadow-sm)}
+.prog-actions{display:flex;align-items:center;justify-content:space-between;margin-top:4px}
+.prog-count{font-size:14px;font-weight:600;color:var(--mut)}
+.prog-toggle-btn{background:none;border:none;color:var(--blue);font-size:14px;font-weight:700;cursor:pointer;padding:4px 8px;font-family:inherit;text-decoration:underline}
+
+/* Program Accordion */
+#acc{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr));gap:18px;align-items:start}
+details{background:#fff;border:2px solid var(--line);border-top:6px solid var(--blue);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:var(--transition);overflow:hidden}
+details:hover{border-color:var(--pale);border-top-color:var(--blue);box-shadow:var(--shadow-md)}
+details[open]{border-color:var(--blue);box-shadow:var(--shadow-md)}
+summary{cursor:pointer;list-style:none;padding:20px;display:flex;gap:14px;align-items:flex-start;font-weight:800;font-size:20px;line-height:1.2;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";margin-left:auto;flex:none;width:32px;height:32px;border-radius:50%;background:var(--tint);color:var(--blue);text-align:center;line-height:30px;font-weight:700;font-size:18px;transition:var(--transition)}
+details[open] summary:after{content:"–";background:var(--blue);color:#fff}
+summary small{display:block;font-weight:500;font-size:14px;color:var(--mut);margin-top:4px}
+.body{padding:0 20px 22px}
+.body q{display:block;quotes:none;font-weight:700;color:var(--blue);background:var(--tint);padding:12px 16px;border-radius:6px;margin:0 0 16px;font-size:15px;line-height:1.5;border-left:4px solid var(--blue)}
+.body ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.body li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--ink);line-height:1.5}
+.body li svg{width:18px;height:18px;color:var(--blue);flex:none;margin-top:3px}
+
+/* Method Rules */
+.method-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr))}
+.rule-card{background:#fff;border-radius:var(--radius-md);padding:26px 24px;border:1px solid var(--line);box-shadow:var(--shadow-sm);transition:var(--transition);position:relative;overflow:hidden}
+.rule-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:var(--blue)}
+.rule-num{font-size:40px;font-weight:900;color:var(--pale);line-height:1;margin-bottom:12px;letter-spacing:-.02em}
+.rule-card h3{margin:0 0 8px;font-weight:800;font-size:21px;color:var(--ink)}
+.rule-card p{margin:0;font-size:15px;color:var(--mut);line-height:1.55}
+
+/* Team */
+.team{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr));list-style:none;margin:0;padding:0}
+.team li{background:#fff;border:2px solid var(--line);border-radius:var(--radius-md);padding:20px;display:flex;flex-direction:column;gap:4px;box-shadow:var(--shadow-sm);transition:var(--transition)}
+.team li:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.team-top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%);color:#fff;font-weight:800;font-size:18px;display:grid;place-items:center;flex:none;box-shadow:var(--shadow-sm);border:2px solid #fff}
+.team-role{font-size:12px;font-weight:800;text-transform:uppercase;color:var(--blue);background:var(--tint);padding:3px 10px;border-radius:999px;display:inline-block;width:fit-content}
+.team b{font-weight:800;font-size:17px;line-height:1.25;color:var(--ink);margin-top:2px}
+.team span{color:var(--mut);font-size:14px;font-weight:500}
+.team .neighborhood{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:13px;color:var(--blue);font-weight:600;display:flex;align-items:center;gap:6px}
+
+/* Vote Section */
+#vote{background:radial-gradient(ellipse at top,var(--blue) 0%,var(--blue-dark) 100%);color:#fff;text-align:center;padding:90px 0}
+#vote .logo{--s:110px;margin:0 auto 24px;border:6px solid rgba(255,255,255,.28);box-shadow:0 12px 32px rgba(0,0,0,.25)}
+#vote h2{max-width:22ch;margin:0 auto 16px;color:#fff}
+#vote p{max-width:54ch;margin:0 auto;font-size:19px;color:#DDE3FB;line-height:1.6}
+.ballot-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);border-radius:var(--radius-md);max-width:540px;margin:32px auto 0;padding:24px 28px;text-align:left}
+.ballot-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.18);margin-bottom:16px}
+.ballot-header b{font-size:16px;font-weight:800;letter-spacing:.02em;color:#fff}
+.ballot-header span{font-size:13px;color:var(--pale);background:rgba(255,255,255,0.12);padding:3px 10px;border-radius:4px}
+.ballot-items{display:grid;gap:8px;font-size:14px;color:var(--pale)}
+.ballot-items div{display:flex;align-items:center;gap:10px}
+.ballot-items svg{width:16px;height:16px;color:#fff;flex:none}
+.vote-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+#vote .pill{background:#fff;color:var(--blue);border-color:#fff}
+#vote .pill:hover{background:var(--pale);color:var(--blue-dark)}
+#vote .pill.out{background:transparent;color:#fff;border-color:rgba(255,255,255,0.6)}
+#vote .pill.out:hover{background:rgba(255,255,255,0.12);border-color:#fff}
+
+/* Footer */
+footer{padding:48px 0;background:#fff;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between}
+footer p{margin:0;color:var(--mut);font-size:14px}
+footer nav{font-size:14px;gap:20px;flex-wrap:wrap}
+
+/* Common Icon component */
+.ic{flex:none;width:46px;height:46px;border-radius:8px;background:var(--pale);color:var(--blue);display:grid;place-items:center}
+.ic svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.menu{display:none;width:44px;height:44px;border:2px solid var(--line);border-radius:999px;background:#fff;place-items:center;cursor:pointer;flex:none}
+
+/* Lightbox Modal */
+.lightbox-modal{position:fixed;inset:0;background:rgba(16,27,94,0.92);backdrop-filter:blur(8px);z-index:999;display:none;place-items:center;padding:24px;opacity:0;transition:opacity .3s ease}
+.lightbox-modal.open{display:grid;opacity:1}
+.lightbox-box{max-width:920px;width:100%;background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.5);position:relative}
+.lightbox-box img{width:100%;max-height:75vh;object-fit:cover;display:block}
+.lightbox-info{padding:18px 24px;display:flex;align-items:center;justify-content:space-between;background:#fff}
+.lightbox-info b{font-size:17px;font-weight:800;color:var(--ink)}
+.lightbox-close{background:var(--tint);border:none;width:38px;height:38px;border-radius:50%;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:var(--transition);font-size:20px;font-weight:700}
+.lightbox-close:hover{background:var(--blue);color:#fff}
+
+/* Toast message */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--blue);color:#fff;padding:12px 20px;border-radius:8px;box-shadow:var(--shadow-lg);font-size:14px;font-weight:700;z-index:1000;transform:translateY(100px);opacity:0;transition:var(--transition);pointer-events:none}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* Back to top button */
+.back-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:none;place-items:center;border:none;box-shadow:var(--shadow-md);cursor:pointer;z-index:90;transition:var(--transition)}
+.back-top:hover{background:var(--blue-hover);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+
+/* Responsive adjustments */
+@media(max-width:959px){
+  header .wrap{gap:12px;height:66px}
+  .menu{display:grid}
+  header nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:3px solid var(--blue);flex-direction:column;gap:0;padding:6px 24px 16px;box-shadow:var(--shadow-lg)}
+  header.open nav{display:flex}
+  header nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+  footer nav{display:flex;position:static;flex-direction:row;border:0;padding:0}
+  footer nav a{padding:0;border:0;font-size:14px}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .bar{font-size:13px;padding:8px 12px}
+  .brand small{display:none}
+  .brand b{font-size:21px}
+  .logo{--s:42px}
+  .pill{padding:9px 18px;font-size:14px}
+  .hero{padding:40px 0}
+  .hero p{font-size:17px;margin-top:18px}
+  .hero .cta .pill{flex:1 1 100%;text-align:center}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .strip div.c{padding:20px 12px 22px 0}
+  .strip b{font-size:32px}
+  .strip span{font-size:14px}
+  section{padding:54px 0}
+  .sub{font-size:16px;margin-bottom:28px}
+  summary{padding:16px;font-size:18px}
+  .ic{width:40px;height:40px}
+  .body{padding:0 16px 18px}
+  .team{grid-template-columns:1fr;gap:12px}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+}
+@media print{
+  header, .bar, .hero-showcase, .gal, #vote, footer, .prog-controls, .back-top{display:none!important}
+  details{break-inside:avoid;border:1px solid #ccc!important}
+  body{color:#000;background:#fff;font-size:12pt}
+  .hero h1{font-size:28pt}
+  .hl{background:none!important;color:#000!important;text-decoration:underline}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  Élections communales · Commune de Tichy · Finir avant de commencer
+  <a href="#contrat">Notre contrat</a>
+</div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="logo"><img src="images/logo_ffs.jpg" alt="Emblème FFS"></span>
+      <span><b>FFS</b><small>Front des Forces Socialistes · Tichy</small></span>
+    </a>
+    <nav>
+      <a href="#parti">Le parti</a>
+      <a href="#tichy">Tichy</a>
+      <a href="#constat">Constat</a>
+      <a href="#programme">Programme</a>
+      <a href="#methode">Méthode</a>
+      <a href="#equipe">L'équipe</a>
+    </nav>
+    <a class="pill" href="#vote">Voter FFS</a>
+    <button class="menu" aria-label="Menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#172683" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="hero-tag"><span class="dot"></span>Élections communales · Liste FFS Tichy</div>
+      <h1>Pour Tichy, <span class="hl">on finit ce qu'on commence.</span></h1>
+      <p>Notre engagement pour la commune de Tichy : des chantiers enfin achevés, un budget publié chaque trimestre et une gestion rigoureuse, du littoral aux villages de montagne.</p>
+      <div class="cta">
+        <a class="pill" href="#programme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4"/></svg>
+          Lire le programme
+        </a>
+        <a class="pill out" href="#parti">Notre histoire</a>
+      </div>
+      <div class="hero-pills">
+        <span>✓ Priorité eau & voiries</span>
+        <span>✓ Budget 100% transparent</span>
+        <span>✓ Écoute permanente des citoyens</span>
+      </div>
+    </div>
+    
+    <!-- Hero visual showcase -->
+    <div class="hero-showcase">
+      <div class="hero-img-wrap">
+        <img src="images/tichy_plages.jpg" alt="Vue panoramique de la baie et des plages de Tichy">
+        <div class="overlay"></div>
+        <span class="badge-top">Commune de Tichy · Béjaïa</span>
+        <div class="badge-logo"><img src="images/logo_ffs.jpg" alt="Logo FFS"></div>
+        <div class="caption-bottom">
+          <h3>Entre mer et montagne</h3>
+          <p>Un potentiel immense, une volonté claire de restaurer la confiance et le cadre de vie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip" id="contrat">
+  <div class="wrap">
+    <div class="c">
+      <b>6 <small>mois</small></b>
+      <span>Diagnostic public de l'eau, des routes et de l'éclairage, village par village.</span>
+    </div>
+    <div class="c">
+      <b>12 <small>mois</small></b>
+      <span>Collecte des déchets régulière dans tous les quartiers et villages de la commune.</span>
+    </div>
+    <div class="c">
+      <b>24 <small>mois</small></b>
+      <span>Chantiers en cours (réseaux, voiries) réceptionnés avant tout nouveau projet.</span>
+    </div>
+    <div class="c">
+      <b>5 <small>ans</small></b>
+      <span>Un littoral aménagé et vivant toute l'année, avec un bilan public annuel.</span>
+    </div>
+  </div>
+</div>
+
+<!-- Section 1 : Parti & Histoire -->
+<section id="parti" class="band">
+  <div class="wrap">
+    <span class="kick">Notre histoire</span>
+    <h2>Un parti né de la démocratie</h2>
+    <p class="sub">Le Front des Forces Socialistes porte depuis plus de soixante ans les mêmes principes : démocratie, justice sociale et dignité du citoyen.</p>
+    
+    <div class="hist">
+      <div class="hist-card">
+        <figure class="ph" onclick="openLightbox('images/hocine_ait_ahmed.jpg', 'Hocine Aït Ahmed (1926–2015), fondateur du FFS')">
+          <span class="tag">Figure historique</span>
+          <img src="images/hocine_ait_ahmed.jpg" alt="Portrait de Hocine Aït Ahmed">
+          <figcaption>Hocine Aït Ahmed (1926–2015), fondateur du FFS</figcaption>
+        </figure>
+        <div class="hist-quote">
+          « La démocratie est une conquête permanente. Elle s'enracine là où les citoyens décident de leur quotidien : dans leur commune. »
+          <strong>— Hocine Aït Ahmed</strong>
+        </div>
+      </div>
+      
+      <ol class="tl">
+        <li>
+          <b>1963</b>
+          <span>Hocine Aït Ahmed, figure emblématique de la guerre de libération, fonde le FFS le 29 septembre pour défendre le pluralisme, la justice sociale et les libertés fondamentales.</span>
+        </li>
+        <li>
+          <b>1989</b>
+          <span>Avec l'ouverture démocratique au multipartisme, le parti agit au grand jour et présente ses candidats aux élections, instaurant la tradition de gestion communale exemplaire.</span>
+        </li>
+        <li>
+          <b>2015</b>
+          <span>Hocine Aït Ahmed s'éteint le 23 décembre. Son héritage demeure la boussole du FFS : concevoir la politique comme un service public d'honneur, sans compromission.</span>
+        </li>
+        <li>
+          <b>Aujourd'hui</b>
+          <span>À Tichy, notre équipe porte cet esprit au plus près des réalités quotidiennes : pour l'eau, les routes, l'école, la jeunesse et la valorisation respectueuse de notre littoral.</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 : Tichy Notre Ville -->
+<section id="tichy">
+  <div class="wrap">
+    <span class="kick">Notre ville</span>
+    <h2>Tichy, entre mer et montagne</h2>
+    <p class="sub">Commune côtière majeure de la wilaya de Béjaïa traversée par la RN9, Tichy unit une plaine maritime convoitée et un écrin montagnard habité par des villages authentiques.</p>
+    
+    <div class="facts">
+      <div><b>57 km²</b><span>Superficie entre mer et relief de montagne</span></div>
+      <div><b>16 546</b><span>Habitants permanents recensés</span></div>
+      <div><b>≈ 15 km</b><span>De Béjaïa par l'axe vital de la RN9</span></div>
+      <div><b>12 km</b><span>De façade maritime sur la Méditerranée</span></div>
+    </div>
+    
+    <div class="gal">
+      <figure class="ph" onclick="openLightbox('images/tichy_plages.jpg', 'Les plages de Tichy — 12 km de côte à préserver et équiper')">
+        <span class="tag">Littoral</span>
+        <img src="images/tichy_plages.jpg" alt="Les plages de Tichy, Méditerranée et sable doré" loading="lazy">
+        <figcaption>
+          <span>Les plages de Tichy</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        </figcaption>
+      </figure>
+      
+      <figure class="ph" onclick="openLightbox('images/tichy_front_mer.jpg', 'Le front de mer de Tichy — Promenade, animation estivale et commerces')">
+        <span class="tag">Cadre de vie</span>
+        <img src="images/tichy_front_mer.jpg" alt="Le front de mer et la promenade de Tichy" loading="lazy">
+        <figcaption>
+          <span>Le front de mer & corniche</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        </figcaption>
+      </figure>
+      
+      <figure class="ph" onclick="openLightbox('images/tichy_montagne.jpg', 'Les villages de montagne de Tichy — Patrimoine kabyle et oliveraies')">
+        <span class="tag">Montagne & Villages</span>
+        <img src="images/tichy_montagne.jpg" alt="Les villages perchés sur les montagnes de Tichy" loading="lazy">
+        <figcaption>
+          <span>Les villages de montagne</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 : Le Constat -->
+<section id="constat" class="band">
+  <div class="wrap">
+    <span class="kick">Le constat</span>
+    <h2>Ce qui doit changer à Tichy</h2>
+    <p class="sub">Des attentes concrètes, répétées d'un quartier à un village, constatées sur le terrain par nos concitoyens.</p>
+    
+    <div class="laws">
+      <div class="law">
+        <div class="law-header">
+          <div class="law-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+          <h3>L'eau et l'assainissement</h3>
+        </div>
+        <p>L'accès régulier à l'eau potable et la modernisation des réseaux d'assainissement restent la première exigence, en particulier l'été avec la forte fréquentation touristique.</p>
+        <a class="law-link" onclick="focusEngagement(0)">→ Voir notre engagement n°1</a>
+      </div>
+      
+      <div class="law">
+        <div class="law-header">
+          <div class="law-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+          <h3>Routes et circulation</h3>
+        </div>
+        <p>La RN9 suffoque chaque été, tandis que les routes des villages de montagne et les ruelles intérieures se dégradent continuellement faute d'entretien suivi.</p>
+        <a class="law-link" onclick="focusEngagement(1)">→ Voir notre engagement n°2</a>
+      </div>
+      
+      <div class="law">
+        <div class="law-header">
+          <div class="law-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+          <h3>Propreté et déchets</h3>
+        </div>
+        <p>Ramassage irrégulier et multiplication de décharges sauvages sur les abords des routes : l'image balnéaire de notre commune et la santé publique sont directement menacées.</p>
+        <a class="law-link" onclick="focusEngagement(2)">→ Voir notre engagement n°3</a>
+      </div>
+      
+      <div class="law">
+        <div class="law-header">
+          <div class="law-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 5h-5L8 10z"/></svg></div>
+          <h3>Un littoral sous-exploité</h3>
+        </div>
+        <p>Les plages attirent des dizaines de milliers de visiteurs, mais la saison est trop courte et les commodités (parkings régulés, sanitaires propres, sécurité) font défaut.</p>
+        <a class="law-link" onclick="focusEngagement(3)">→ Voir notre engagement n°4</a>
+      </div>
+      
+      <div class="law">
+        <div class="law-header">
+          <div class="law-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Une jeunesse nombreuse</h3>
+        </div>
+        <p>Les 20–29 ans constituent la première force démographique de Tichy. Pourtant, ils manquent cruellement d'espaces sportifs, de lieux culturels et de perspectives économiques.</p>
+        <a class="law-link" onclick="focusEngagement(4)">→ Voir notre engagement n°5</a>
+      </div>
+      
+      <div class="law">
+        <div class="law-header">
+          <div class="law-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <h3>Gestion et proximité</h3>
+        </div>
+        <p>Lourdeurs administratives, opacité des délibérations et absence de communication : les citoyens ont le droit légitime de savoir comment chaque dinar communal est alloué.</p>
+        <a class="law-link" onclick="focusEngagement(8)">→ Voir notre engagement n°9</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 : Le Programme -->
+<section id="programme">
+  <div class="wrap">
+    <span class="kick">Notre programme</span>
+    <h2>Nos engagements pour Tichy</h2>
+    <p class="sub">Neuf domaines de compétence communale, une seule doctrine d'action : finir ce qui est engagé, publier les chiffres, rendre des comptes.</p>
+    
+    <!-- Controls: Search & Category filter -->
+    <div class="prog-controls">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="search" id="prog-search" placeholder="Rechercher une mesure (ex: eau, RN9, écoles, jeunes, tri...)" oninput="filterEngagements()">
+      </div>
+      
+      <div class="filter-chips">
+        <button class="chip active" onclick="setCategory('all', this)">Tous (9)</button>
+        <button class="chip" onclick="setCategory('cadre', this)">💧 Eau & Cadre de vie</button>
+        <button class="chip" onclick="setCategory('routes', this)">🚗 Routes & Littoral</button>
+        <button class="chip" onclick="setCategory('jeunesse', this)">🎓 Jeunesse & Éducation</button>
+        <button class="chip" onclick="setCategory('democratie', this)">🏛️ Économie & Transparence</button>
+      </div>
+      
+      <div class="prog-actions">
+        <span class="prog-count" id="prog-count">9 domaines d'action affichés</span>
+        <div>
+          <button class="prog-toggle-btn" onclick="toggleAllDetails(true)">Tout ouvrir</button> ·
+          <button class="prog-toggle-btn" onclick="toggleAllDetails(false)">Tout fermer</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="acc"></div>
+  </div>
+</section>
+
+<!-- Section 5 : La Méthode -->
+<section id="methode" class="band">
+  <div class="wrap">
+    <span class="kick">Notre méthode</span>
+    <h2>Cinq règles pour tenir parole</h2>
+    <p class="sub">Les obligations éthiques et managériales que nos élus s'imposent dès le premier jour de leur mandat à l'APC de Tichy.</p>
+    
+    <div class="method-grid">
+      <div class="rule-card">
+        <div class="rule-num">01</div>
+        <h3>Finir avant de commencer</h3>
+        <p>Aucun nouveau chantier d'infrastructure ne sera lancé tant que les chantiers de même nature en souffrance ne sont pas définitivement réceptionnés.</p>
+      </div>
+      
+      <div class="rule-card">
+        <div class="rule-num">02</div>
+        <h3>Un budget public trimestriel</h3>
+        <p>Affichage physique dans chaque mairie annexe et publication en ligne chaque trimestre des dépenses, marchés publics et états d'avancement réels.</p>
+      </div>
+      
+      <div class="rule-card">
+        <div class="rule-num">03</div>
+        <h3>Réunions de quartier annuelles</h3>
+        <p>Une assemblée populaire annuelle dans chaque village de montagne et quartier de la plaine pour débattre et voter les priorités budgétaires locales.</p>
+      </div>
+      
+      <div class="rule-card">
+        <div class="rule-num">04</div>
+        <h3>Permanences hebdomadaires</h3>
+        <p>Chaque élu assurera une permanence obligatoire à jour fixe, sans rendez-vous préalable, pour recevoir, orienter et aider les administrés.</p>
+      </div>
+      
+      <div class="rule-card">
+        <div class="rule-num">05</div>
+        <h3>Bilan public annuel</h3>
+        <p>Publication et présentation publique chaque fin d'année d'un rapport transparent : engagements tenus, chantiers reportés et explications détaillées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6 : L'Équipe -->
+<section id="equipe">
+  <div class="wrap">
+    <span class="kick">L'équipe</span>
+    <h2>Celles et ceux qui s'engagent</h2>
+    <p class="sub">Des habitantes et habitants de Tichy, issus de chaque quartier et village, combinant compétence professionnelle, militantisme associatif et intégrité morale.</p>
+    
+    <ol class="team" id="cands"></ol>
+  </div>
+</section>
+
+<!-- Section 7 : Appel au Vote -->
+<section id="vote">
+  <div class="wrap">
+    <div class="logo"><img src="images/logo_ffs.jpg" alt="Logo FFS"></div>
+    <h2>Pour Tichy, votons pour l'engagement</h2>
+    <p>La crédibilité, la compétence, la transparence : votre bulletin de vote est l'instrument pacifique et légitime pour bâtir l'avenir de notre commune.</p>
+    
+    <div class="ballot-card">
+      <div class="ballot-header">
+        <b>BULLETIN OFFICIEL · APC DE TICHY</b>
+        <span>Élections communales</span>
+      </div>
+      <div class="ballot-items">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Parti :</strong> Front des Forces Socialistes (FFS)</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Devise :</strong> Finir avant de commencer</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Bureaux de vote :</strong> Ouverts de 08h00 à 19h00 (Carte d'électeur ou CNI)</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="vote-actions">
+      <a class="pill" href="#top">Voter FFS</a>
+      <button class="pill out" onclick="shareProgram()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+        Partager ce programme
+      </button>
+      <button class="pill out" onclick="window.print()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Imprimer la synthèse
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="logo"><img src="images/logo_ffs.jpg" alt="Logo FFS"></span>
+      <span><b>FFS</b><small>Tirni n Iɣallen Inemlayen · Tichy</small></span>
+    </a>
+    <nav>
+      <a href="#parti">Le parti</a>
+      <a href="#tichy">Tichy</a>
+      <a href="#programme">Programme</a>
+      <a href="#methode">Méthode</a>
+      <a href="#equipe">L'équipe</a>
+      <a href="#contrat">Notre contrat</a>
+    </nav>
+    <p>Élections communales · Commune de Tichy · Wilaya de Béjaïa</p>
+  </div>
+</footer>
+
+<!-- Lightbox Modal -->
+<div class="lightbox-modal" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-box" onclick="event.stopPropagation()">
+    <img id="lightbox-img" src="" alt="Vue agrandie">
+    <div class="lightbox-info">
+      <b id="lightbox-cap"></b>
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">✕</button>
+    </div>
+  </div>
+</div>
+
+<!-- Floating Toast -->
+<div class="toast" id="toast">Lien du programme copié dans le presse-papier !</div>
+
+<!-- Back to top button -->
+<button class="back-top" id="backTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Haut de page">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+// SVG Icons for the 9 domains
+const I=[
+  "<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>",
+  "<path d="M3 11l19-9-9 19-2-8-8-2z"/>",
+  "<path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>",
+  "<circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 5h-5L8 10z"/>",
+  "<circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>",
+  "<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>",
+  "<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>",
+  "<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>",
+  "<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>"
+];
+
+// 9 Programmatic Domains with Category tags
+const S=[
+  [
+    "Eau et assainissement",
+    "Un droit fondamental, pas un privilège",
+    "L'accès continu à l'eau potable est notre première urgence.",
+    [
+      "Diagnostic technique public des réseaux d'eau et d'assainissement, village par village, sous 6 mois.",
+      "Élimination systématique des fuites et finalisation des raccordements déjà financés avant toute nouvelle extension.",
+      "Traitement strict des eaux usées avant tout déversement vers le littoral marin et les oueds de la commune."
+    ],
+    "cadre"
+  ],
+  [
+    "Routes, éclairage, villages",
+    "Désenclaver chaque village avec dignité",
+    "Chaque village de montagne doit être relié confortablement au chef-lieu.",
+    [
+      "Plan pluriannuel d'entretien programmé des voiries communales et des pistes de montagne.",
+      "Réfection et modernisation de l'éclairage public communal avec signalement numérique des pannes.",
+      "Plan de circulation estivale et de stationnement pour décongestionner la RN9 et sécuriser le front de mer."
+    ],
+    "routes"
+  ],
+  [
+    "Propreté et environnement",
+    "Une commune propre, saine et respirable",
+    "Transformer la gestion des déchets ménagers en ressource utile.",
+    [
+      "Collecte ordonnée des déchets dans l'ensemble des quartiers et villages, renforcée en période estivale.",
+      "Éradication des dépôts anarchiques et implantation de points d'apport volontaire de proximité.",
+      "Soutien aux micro-entreprises locales spécialisées dans le tri et le recyclage créateur d'emplois verts."
+    ],
+    "cadre"
+  ],
+  [
+    "Littoral et tourisme",
+    "Des plages accueillantes et vivantes toute l'année",
+    "Un littoral protégé contre la spéculation et valorisé pour les habitants.",
+    [
+      "Plages propres, sécurisées et équipées de sanitaires publics décents et de parkings à tarification communale transparente.",
+      "Extension de la saison touristique : sentiers de randonnée pédestre vers les hauteurs et soutien au gîte chez l'habitant.",
+      "Protection rigoureuse du domaine maritime et des terres agricoles contre l'urbanisation sauvage."
+    ],
+    "routes"
+  ],
+  [
+    "Jeunesse, sport et culture",
+    "Un avenir digne ici, dans notre commune",
+    "L'énergie de notre jeunesse est notre atout le plus précieux.",
+    [
+      "Rénovation complète des aires de jeux de quartier et création d'une Maison des Jeunes dynamique et équipée.",
+      "Critères publics et transparents pour l'attribution des subventions aux associations sportives et culturelles.",
+      "Organisation d'un festival annuel de Tichy pour célébrer la culture locale, les arts et la langue amazighe."
+    ],
+    "jeunesse"
+  ],
+  [
+    "École et santé de proximité",
+    "Mieux grandir, mieux se soigner",
+    "Des écoles entretenues et des soins accessibles dans chaque village.",
+    [
+      "Rénovation thermique des écoles primaires, cantines scolaires équilibrées et transport scolaire garanti pour les collines.",
+      "Ouverture continue des salles de soins et dispensaires avec approvisionnement régulier en médicaments de première urgence.",
+      "Campagnes de prévention sanitaire et d'hygiène menées en collaboration étroite avec le mouvement associatif."
+    ],
+    "jeunesse"
+  ],
+  [
+    "Économie locale et emploi",
+    "Produire et travailler au pays",
+    "Dynamiser l'artisanat, le commerce et l'agriculture de montagne.",
+    [
+      "Guichet unique communal d'orientation et de facilitation pour les jeunes porteurs de projets et artisans locaux.",
+      "Aménagement d'un marché communal régulier pour les producteurs agricoles et oléicoles de la région.",
+      "Clause d'insertion et priorité absolue à l'embauche des jeunes de Tichy sur tous les chantiers communaux."
+    ],
+    "democratie"
+  ],
+  [
+    "Famille et solidarité",
+    "Ne laisser aucun citoyen de côté",
+    "Une commune forte est une commune solidaire des plus vulnérables.",
+    [
+      "Ciblage rigoureux et équitable des aides sociales pour les familles nécessiteuses, personnes âgées et personnes à besoins spécifiques.",
+      "Accompagnement de l'autonomie des femmes rurales par des micro-crédits et des ateliers artisanaux.",
+      "Dispositifs d'écoute et de prévention contre les fléaux sociaux aux abords des établissements scolaires."
+    ],
+    "cadre"
+  ],
+  [
+    "Transparence et argent public",
+    "Chaque dinar dépensé doit être justifié",
+    "La confiance se bâtit par l'honnêteté et la clarté des comptes.",
+    [
+      "Affichage public et mise en ligne intégrale du budget communal, des marchés et des délibérations de l'APC.",
+      "Numérisation des prestations administratives d'état civil pour en finir avec les files d'attente.",
+      "Zéro tolérance pour le clientélisme : égalité stricte de traitement pour chaque habitant de Tichy."
+    ],
+    "democratie"
+  ]
+];
+
+// Checkmark icon
+const CHK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>';
+
+// Render program
+let currentCat = 'all';
+function renderProgram(){
+  const q = (document.getElementById('prog-search')?.value || '').toLowerCase().trim();
+  const acc = document.getElementById('acc');
+  
+  let filtered = S.map((s, idx) => ({data: s, origIndex: idx}))
+    .filter(item => {
+      if(currentCat !== 'all' && item.data[4] !== currentCat) return false;
+      if(!q) return true;
+      const haystack = (item.data[0] + ' ' + item.data[1] + ' ' + item.data[2] + ' ' + item.data[3].join(' ')).toLowerCase();
+      return haystack.includes(q);
+    });
+    
+  document.getElementById('prog-count').textContent = `${filtered.length} domaine${filtered.length > 1 ? 's' : ''} affiché${filtered.length > 1 ? 's' : ''}`;
+  
+  if(filtered.length === 0){
+    acc.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px 20px;background:#fff;border-radius:10px;border:2px dashed var(--line);color:var(--mut)"><p style="margin:0 0 8px;font-size:18px;font-weight:700">Aucun résultat trouvé pour « ${q} »</p><span style="font-size:14px">Essayez avec un autre mot-clé (ex: eau, route, jeunesse, budget...)</span></div>`;
+    return;
+  }
+  
+  acc.innerHTML = filtered.map((item, i) => {
+    const s = item.data;
+    const idx = item.origIndex;
+    const isOpen = (i === 0 && !q && currentCat === 'all') || (q.length > 0);
+    return `<details id="eng-${idx}" ${isOpen ? 'open' : ''}>
+      <summary>
+        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true">${I[idx]}</svg></span>
+        <span>${s[0]}<small>${s[1]}</small></span>
+      </summary>
+      <div class="body">
+        <q>${s[2]}</q>
+        <ul>${s[3].map(x => `<li>${CHK}<span>${x}</span></li>`).join('')}</ul>
+      </div>
+    </details>`;
+  }).join('');
+}
+
+function filterEngagements(){
+  renderProgram();
+}
+
+function setCategory(cat, el){
+  currentCat = cat;
+  document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderProgram();
+}
+
+function toggleAllDetails(open){
+  document.querySelectorAll('#acc details').forEach(d => d.open = open);
+}
+
+function focusEngagement(index){
+  currentCat = 'all';
+  document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
+  document.querySelector('.filter-chips .chip').classList.add('active');
+  document.getElementById('prog-search').value = '';
+  renderProgram();
+  const el = document.getElementById(`eng-${index}`);
+  if(el){
+    el.open = true;
+    el.scrollIntoView({behavior: 'smooth', block: 'center'});
+    el.style.borderColor = 'var(--blue)';
+    setTimeout(() => el.style.borderColor = '', 2000);
+  }
+}
+
+// Initial program render
+renderProgram();
+
+// Realistic Candidates List for Tichy
+const candidates = [
+  {role: "Tête de liste", name: "Cadre territorial & Militant associatif", loc: "Tichy-Centre", init: "TL"},
+  {role: "Candidate n°2", name: "Enseignante & Militante des droits sociaux", loc: "Taourirt", init: "ES"},
+  {role: "Candidat n°3", name: "Ingénieur d'État en Génie Civil & Hydraulique", loc: "Boumelha", init: "GH"},
+  {role: "Candidate n°4", name: "Médecin praticienne de santé publique", loc: "Tizi Ahmed", init: "SP"},
+  {role: "Candidat n°5", name: "Éducateur sportif & Animateur de club", loc: "Tichy-Plage", init: "JS"},
+  {role: "Candidate n°6", name: "Entrepreneure locale & Créatrice de projets", loc: "Ikherbane", init: "EL"},
+  {role: "Candidat n°7", name: "Agriculteur & Délégué des comités villageois", loc: "Tibizelt", init: "VR"},
+  {role: "Candidate n°8", name: "Directrice d'établissement & Juriste", loc: "Tichy Littoral", init: "DJ"}
+];
+
+document.getElementById('cands').innerHTML = candidates.map(c => `
+  <li>
+    <div class="team-top">
+      <div class="av">${c.init}</div>
+      <div>
+        <span class="team-role">${c.role}</span>
+        <b>${c.name}</b>
+      </div>
+    </div>
+    <div class="neighborhood">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>Village / Secteur : ${c.loc}</span>
+    </div>
+  </li>
+`).join('');
+
+// Header Mobile Toggle
+const hd = document.querySelector('header');
+const mb = document.querySelector('.menu');
+mb.onclick = () => {
+  const isOpen = hd.classList.toggle('open');
+  mb.setAttribute('aria-expanded', isOpen);
+};
+hd.querySelectorAll('nav a').forEach(a => a.onclick = () => {
+  hd.classList.remove('open');
+  mb.setAttribute('aria-expanded', 'false');
+});
+
+// Scrollspy for Nav
+const sections = document.querySelectorAll('section[id], .hero[id]');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => {
+    const top = s.offsetTop - 120;
+    if(window.scrollY >= top) cur = s.getAttribute('id');
+  });
+  document.querySelectorAll('header nav a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === `#${cur}`);
+  });
+  
+  // Back to top button visibility
+  const btn = document.getElementById('backTopBtn');
+  if(window.scrollY > 400){
+    btn.style.display = 'grid';
+  } else {
+    btn.style.display = 'none';
+  }
+}, {passive: true});
+
+// Lightbox Modal functions
+function openLightbox(src, caption){
+  const m = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-cap').textContent = caption;
+  m.classList.add('open');
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape') closeLightbox();
+});
+
+// Share Program Function
+function shareProgram(){
+  if(navigator.share){
+    navigator.share({
+      title: 'FFS Tichy – Programme élections communales',
+      text: 'Découvrez les 9 engagements concrets de la liste FFS pour la commune de Tichy : finir avant de commencer !',
+      url: window.location.href
+    }).catch(()=>{});
+  } else {
+    navigator.clipboard?.writeText(window.location.href);
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3000);
+  }
+}
+</script>
+</body>
+</html>
